@@ -1,6 +1,4 @@
 # Template body for WISPS prerun script.
-# Variables injected as a header by the Python executor before this body:
-#   AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, S3_PATH, D
 
 module load singularity
 module load nextflow
