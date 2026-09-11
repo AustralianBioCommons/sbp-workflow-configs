@@ -23,3 +23,17 @@ When running workflows offline in _workflow_ queue with `nextflow/25.10.x` via S
     ```
 
 3. Run the workflow via Seqera, using the Git repo as the "Pipeline to launch" (e.g. `https://github.com/AustralianBioCommons/sbp-proteinfold.git`)
+
+## Using mini or prod databases with _protienfold_ and _wisps_
+
+To use different databases across different SBP instances (e.g. mini databases on `dev` and prod databases on `staging`/`prod`), set the `PF_DB_BASE_DIR` environment variable to the appropriate database base directory before running the _protienfold_ or _wisps_ workflows. On Seqera, this can be set in the pre-run script.
+
+To use mini databases:
+```bash
+export PF_DB_BASE_DIR="/g/data/if89/proteinfold_dbs/proteinfold_minidbs"
+```
+
+To use prod databases:
+```bash
+export PF_DB_BASE_DIR="/g/data/li87/proteinfold_dbs"
+```
